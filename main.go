@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 
 	"github.com/gorilla/mux"
@@ -90,5 +91,5 @@ func main() {
 	router.HandleFunc("/sushi/{id}", updateRoll).Methods("POST")
 	router.HandleFunc("/sushi/{id}", deleteRoll).Methods("DELETE")
 
-	log.Fatal(http.ListenAndServe(":5000", router))
+	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), router))
 }
