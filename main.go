@@ -8,6 +8,7 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
+	"github.com/rs/cors"
 )
 
 //Roll is model for sushi
@@ -112,5 +113,8 @@ func main() {
 	router.HandleFunc("/sushi/{id}", updateRoll).Methods("POST")
 	router.HandleFunc("/sushi/{id}", deleteRoll).Methods("DELETE")
 
-	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), router))
+	//added CORS for heroku deploy
+	handler := cors.Default().Handler(router)
+
+	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), handler))
 }
