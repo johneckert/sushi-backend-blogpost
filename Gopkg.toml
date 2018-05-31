@@ -24,6 +24,12 @@
 #   go-tests = true
 #   unused-packages = true
 
+[metadata.heroku]
+  root-package = "github.com/johneckert/blogpost"
+  go-version = "1.10.1"
+  install = [ "./..." ]
+
+
 
 [[constraint]]
   name = "github.com/gorilla/mux"
