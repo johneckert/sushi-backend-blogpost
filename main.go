@@ -80,7 +80,28 @@ func deleteRoll(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	rolls = append(rolls, Roll{ID: "1", ImageNumber: "8", Name: "Spicy Tuna Roll", Ingredients: "Tuna, Chili sauce, Nori, Rice"}, Roll{ID: "2", ImageNumber: "6", Name: "California Roll", Ingredients: "Crab, Avocado, Cucumber, Nori, Rice"})
+	//stump data TODO: Implement database
+	rolls = append(rolls, Roll{ID: "1", ImageNumber: "8", Name: "Spicy Tuna Roll", Ingredients: "Tuna, Chili sauce, Nori, Rice"})
+
+	rolls = append(rolls, Roll{ID: "2", ImageNumber: "4", Name: "California Roll", Ingredients: "Crab, Cucumber, Avocado, Nori, Rice"})
+
+	rolls = append(rolls, Roll{ID: "3", ImageNumber: "10", Name: "Caterpillar Roll", Ingredients: "Tempura Shrimp, Cucumber, Avocado, Nori, Rice, Eel Sauce"})
+
+	rolls = append(rolls, Roll{ID: "4", ImageNumber: "7", Name: "Spider Roll", Ingredients: "Tempura Crab, Nori, Rice, Avocado, Spicy mayonnaise"})
+
+	rolls = append(rolls, Roll{ID: "5", ImageNumber: "2", Name: "Unagi Roll", Ingredients: "Broiled Eel, Avocado, Nori, Rice, Eel sauce"})
+
+	rolls = append(rolls, Roll{ID: "6", ImageNumber: "1", Name: "Philidelphia Roll", Ingredients: "Smoked Salmon, Cream Cheese, Cucumber, Nori, Rice"})
+
+	rolls = append(rolls, Roll{ID: "7", ImageNumber: "3", Name: "Salmon Roll", Ingredients: "Salmon, Nori, Rice, Tobiko"})
+
+	rolls = append(rolls, Roll{ID: "8", ImageNumber: "6", Name: "Avocado Roll", Ingredients: "Avocado, Nori, Rice"})
+
+	rolls = append(rolls, Roll{ID: "9", ImageNumber: "9", Name: "Rainbow Roll", Ingredients: "Yellow Tail, Salmon, Cucumber, Nori, Rice"})
+
+	rolls = append(rolls, Roll{ID: "10", ImageNumber: "5", Name: "Tobiko Roll", Ingredients: "Tobiko, Nori, Sushi Rice"})
+
+	rolls = append(rolls, Roll{ID: "11", ImageNumber: "11", Name: "Yellow Tail Sushi", Ingredients: "Yellow Tail, Wasabi, Sushi Rice"})
 	//initialize router
 	router := mux.NewRouter()
 
